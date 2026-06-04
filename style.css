@@ -127,29 +127,30 @@ h2 {
 }
 
 /* PROJECTS */
-.project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
-}
-.project-card {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-
-    transition: 0.4s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:40px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    height:260px;
+
+    background:#1e293b;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
 }
 
 .project-content {
